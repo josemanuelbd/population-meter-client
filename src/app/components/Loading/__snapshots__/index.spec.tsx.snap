@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Loading should return a custom loading 1`] = `
+<styles__Container>
+  Custom loading
+</styles__Container>
+`;
+
+exports[`Loading should return default loading 1`] = `
+<styles__Container>
+  Loading...
+</styles__Container>
+`;
