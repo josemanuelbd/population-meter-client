@@ -1,6 +1,17 @@
 # Population Meter client
 ![Population Meter](./population-meter.gif)
 
+* Green (0 - 20 people)
+* Yellow (21 - 99 people)
+* Red (> 100 people)
+
+TODO:
+- [x] Show info about diferent hours of the same day
+- [x] Show info about diferent hours during the whole week
+- [x] Show information in a map using the coordinates of the differents places.
+
+## React App usage
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
