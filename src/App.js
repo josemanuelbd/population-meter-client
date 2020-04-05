@@ -1,25 +1,38 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import logo from './logo.svg';
+import { getTimesByLocation } from './helper/locationTimes';
 import './App.css';
+import PopulationMeter from './components/PopulationMeter';
 
 function App() {
+
+  const [loading, setLoading] = useState(true);
+  const [times, setTimes] = useState(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const times = await getTimesByLocation();
+      setTimes(times);
+      setLoading(false);
+    }
+
+    fetchData();
+  }, []);
+  
+  console.log(times);
+
   return (
+    <>
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Population Meter Loading
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
     </div>
+    {!loading ? <PopulationMeter times={times}></PopulationMeter> : null}
+    </>
   );
 }
 

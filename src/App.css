@@ -7,6 +7,12 @@
   pointer-events: none;
 }
 
+.People-logo {
+  height: 17vmin;
+  pointer-events: none;
+  fill: white;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
